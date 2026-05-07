@@ -1,22 +1,37 @@
 import { createContext, useState } from 'react'
-import Navbar from './components/Navbar';
-import Card from './components/Card';
-import './App.css'
-export const ThemeContext = createContext();
+//--------------Task 1------------------
+// import Navbar from './components/Navbar';
+// import Card from './components/Card';
+// import './App.css'
+// export const ThemeContext = createContext();
 
-export default function App() {
-const [isDark ,setIsDark]= useState(false)
-const theme = isDark ? "dark" : "light" 
-function toogleclick(){
-  setIsDark(!isDark)
-}
-return(
+// export default function App() {
+// const [isDark ,setIsDark]= useState(false)
+// const theme = isDark ? "dark" : "light" 
+// function toogleclick(){
+//   setIsDark(!isDark)
+// }
+// return(
 
-  <ThemeContext.Provider value ={{theme,toogleclick}}>
-    <Navbar/>
-    <Card/>
-    <button onClick={toogleclick}>Click</button>
-  </ThemeContext.Provider>
+//   <ThemeContext.Provider value ={{theme,toogleclick}}>
+//     <Navbar/>
+//     <Card/>
+//     <button onClick={toogleclick}>Click</button>
+//   </ThemeContext.Provider>
 
-)
+// )
+// }
+//--------------Task 2------------------
+import Nav from "./task2/Nav";
+import Sidebar from "./task2/Sidebar"
+export const UserContext = createContext();
+
+export default function App(){
+  const user = {name:"Rohan",role:"IT"}
+  return(
+    <UserContext.Provider value = {user}>
+      <Nav/>
+      <Sidebar/>
+    </UserContext.Provider>
+  )
 }
