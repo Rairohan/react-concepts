@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react'
-//--------------Task 1------------------
+// --------------Task 1------------------
 // import Navbar from './components/Navbar';
 // import Card from './components/Card';
 // import './App.css'
@@ -21,17 +21,40 @@ import { createContext, useState } from 'react'
 
 // )
 // }
-//--------------Task 2------------------
-import Nav from "./task2/Nav";
-import Sidebar from "./task2/Sidebar"
-export const UserContext = createContext();
+// --------------Task 2------------------
+// import Nav from "./task2/Nav";
+// import Sidebar from "./task2/Sidebar"
+// export const UserContext = createContext();
 
-export default function App(){
-  const user = {name:"Rohan",role:"IT"}
+// export default function App(){
+//   const user = {name:"Rohan",role:"IT"}
+//   return(
+//     <UserContext.Provider value = {user}>
+//       <Nav/>
+//       <Sidebar/>
+//     </UserContext.Provider>
+//   )
+// }
+
+// --------------Task 3------------------
+import Header from "./task3.jsx/Header";
+import Footer from "./task3.jsx/Footer";
+export const LanguageContext = createContext();
+export default function App()
+{
+  const [lang,setLang] = useState("en")
+ 
+  function toggle(){
+    setLang(lang ==="en" ? "np" : "en")
+  }
+ 
   return(
-    <UserContext.Provider value = {user}>
-      <Nav/>
-      <Sidebar/>
-    </UserContext.Provider>
+      <LanguageContext.Provider value={{ lang, toggle }}>
+      <Header/>
+      <Footer/>
+      <button onClick={toggle}>
+        Switch Language
+      </button>
+    </LanguageContext.Provider>
   )
 }
