@@ -37,24 +37,45 @@ import { createContext, useState } from 'react'
 // }
 
 // --------------Task 3------------------
-import Header from "./task3.jsx/Header";
-import Footer from "./task3.jsx/Footer";
-export const LanguageContext = createContext();
-export default function App()
-{
-  const [lang,setLang] = useState("en")
+// import Header from "./task3.jsx/Header";
+// import Footer from "./task3.jsx/Footer";
+// export const LanguageContext = createContext();
+// export default function App()
+// {
+//   const [lang,setLang] = useState("en")
  
-  function toggle(){
-    setLang(lang ==="en" ? "np" : "en")
+//   function toggle(){
+//     setLang(lang ==="en" ? "np" : "en")
+//   }
+ 
+//   return(
+//       <LanguageContext.Provider value={{ lang, toggle }}>
+//       <Header/>
+//       <Footer/>
+//       <button onClick={toggle}>
+//         Switch Language
+//       </button>
+//     </LanguageContext.Provider>
+//   )
+// }
+// --------------Task 4------------------
+import Nbar from "./task4/Nbar";
+import Productcard from "./task4/Productcard";
+import CartSummary from "./task4/CartSummary";  
+export const CountContext = createContext();
+export default function App(){
+  const [count,setCount] = useState(0);
+  function addtocart(){
+    setCount(count+1)
   }
- 
-  return(
-      <LanguageContext.Provider value={{ lang, toggle }}>
-      <Header/>
-      <Footer/>
-      <button onClick={toggle}>
-        Switch Language
-      </button>
-    </LanguageContext.Provider>
-  )
+  function remove(){
+    setCount(count>0 ? count-1 : 0)
+  }
+return(
+  <CountContext.Provider value={{count, addtocart,remove}}>
+    <Nbar/>
+    <Productcard/>
+    <CartSummary/>
+  </CountContext.Provider>
+)
 }
