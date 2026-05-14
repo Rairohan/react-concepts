@@ -1,4 +1,4 @@
-import { createContext, use, useState } from 'react'
+import { createContext, use, useReducer, useState } from 'react'
 // --------------Task 1------------------
 // import Navbar from './components/Navbar';
 // import Card from './components/Card';
@@ -80,27 +80,35 @@ import { createContext, use, useState } from 'react'
 // )
 // }
 // --------------Login system------------------
-import Dashboard from './Login_sys/Dashboard';
-import Navbar from './Login_sys/Navbar';
-import Loginbutton from './Login_sys/Loginbutton';
-export const AuthContext = createContext();
-export default function App(){
-  const [isLoggedIn,setIsLoggedIn] = useState(false)
-  const [user,setUser] =useState(null)
-    function login(){
-      setIsLoggedIn(true)
-      setUser({name : "rohan"})
-    }
-    function logout(){
-      setIsLoggedIn(false)
-      setUser(null)
-    }
-    return( 
-      <AuthContext.Provider value ={{login,logout,user,isLoggedIn}}>
-        <Dashboard/>
-        <Navbar/>
-        <Loginbutton/>
-      </AuthContext.Provider>
-    )
+// import Dashboard from './Login_sys/Dashboard';
+// import Navbar from './Login_sys/Navbar';
+// import Loginbutton from './Login_sys/Loginbutton';
+// export const AuthContext = createContext();
+// export default function App(){
+//   const [isLoggedIn,setIsLoggedIn] = useState(false)
+//   const [user,setUser] =useState(null)
+//     function login(){
+//       setIsLoggedIn(true)
+//       setUser({name : "rohan"})
+//     }
+//     function logout(){
+//       setIsLoggedIn(false)
+//       setUser(null)
+//     }
+//     return( 
+//       <AuthContext.Provider value ={{login,logout,user,isLoggedIn}}>
+//         <Dashboard/>
+//         <Navbar/>
+//         <Loginbutton/>
+//       </AuthContext.Provider>
+//     )
 
+// }
+// --------------Reducer-eg----------------------
+import Cartcounter from './reducer/Cartcounter'
+export default function App(){
+  const [count, dispatch] = useReducer(useReducer,0)
+  return(
+    <Cartcounter/>
+  )
 }
