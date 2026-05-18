@@ -106,9 +106,11 @@ import { createContext, use, useReducer, useState } from 'react'
 // }
 // --------------Reducer-eg----------------------
 import Cartcounter from './reducer/Cartcounter'
+import Trafficlight from './reducer/Trafficlight'
+import Texteditor from './reducer/Texteditor'
 export default function App(){
-  const [count, dispatch] = useReducer(useReducer,0)
+  // const [count, dispatch] = useReducer(useReducer,0)
   return(
-    <Cartcounter/>
+    <Texteditor/>
   )
 }
