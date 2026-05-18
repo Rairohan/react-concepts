@@ -103,14 +103,17 @@ import { createContext, use, useReducer, useState } from 'react'
 //       </AuthContext.Provider>
 //     )
 
+
 // }
 // --------------Reducer-eg----------------------
-import Cartcounter from './reducer/Cartcounter'
-import Trafficlight from './reducer/Trafficlight'
-import Texteditor from './reducer/Texteditor'
+// import Cartcounter from './reducer/Cartcounter'
+// import Trafficlight from './reducer/Trafficlight'
+// import Texteditor from './reducer/Texteditor'
+// import Todo from './reducer/Todo'
+import Banking from './reducer/Banking'
 export default function App(){
-  // const [count, dispatch] = useReducer(useReducer,0)
+ 
   return(
-    <Texteditor/>
+   <Banking/>
   )
 }
