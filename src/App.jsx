@@ -105,15 +105,31 @@ import { createContext, use, useReducer, useState } from 'react'
 
 
 // }
+// --------------Notification-sys----------------------
+import Notification from './notification_sys/Notification';
+export const NotifContext = createContext();
+export default function App(){
+  const [notif,setNotif] = useState({message:"",type:""})
+  return(
+    <NotifContext.Provider value={notif}>
+      <button onClick={()=>setNotif({message:"File saved",type:"success"})}>File saved</button>
+      <button onClick={()=>setNotif({message:"Something went wrong",type:"error"})}>something went wrong</button>
+      <button onClick={()=>setNotif({message:"Low storage",type:"warning"})}>low storage</button>
+      <Notification/>
+    </NotifContext.Provider>
+  )
+}
+
+
 // --------------Reducer-eg----------------------
 // import Cartcounter from './reducer/Cartcounter'
 // import Trafficlight from './reducer/Trafficlight'
 // import Texteditor from './reducer/Texteditor'
 // import Todo from './reducer/Todo'
-import Banking from './reducer/Banking'
-export default function App(){
+// import Banking from './reducer/Banking'
+// export default function App(){
  
-  return(
-   <Banking/>
-  )
-}
+//   return(
+//    <Banking/>
+//   )
+// }
