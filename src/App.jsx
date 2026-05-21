@@ -106,19 +106,20 @@ import { createContext, use, useReducer, useState } from 'react'
 
 // }
 // --------------Notification-sys----------------------
-import Notification from './notification_sys/Notification';
-export const NotifContext = createContext();
-export default function App(){
-  const [notif,setNotif] = useState({message:"",type:""})
-  return(
-    <NotifContext.Provider value={notif}>
-      <button onClick={()=>setNotif({message:"File saved",type:"success"})}>File saved</button>
-      <button onClick={()=>setNotif({message:"Something went wrong",type:"error"})}>something went wrong</button>
-      <button onClick={()=>setNotif({message:"Low storage",type:"warning"})}>low storage</button>
-      <Notification/>
-    </NotifContext.Provider>
-  )
-}
+// import Notification from './notification_sys/Notification';
+// export const NotifContext = createContext();
+// export default function App(){
+//   const [notif,setNotif] = useState({message:"",type:""})
+//   return(
+//     <NotifContext.Provider value={notif}>
+//       <button onClick={()=>setNotif({message:"File saved",type:"success"})}>File saved</button>
+//       <button onClick={()=>setNotif({message:"Something went wrong",type:"error"})}>something went wrong</button>
+//       <button onClick={()=>setNotif({message:"Low storage",type:"warning"})}>low storage</button>
+//       <Notification/>
+//     </NotifContext.Provider>
+//   )
+// }
+
 
 
 // --------------Reducer-eg----------------------
@@ -133,3 +134,16 @@ export default function App(){
 //    <Banking/>
 //   )
 // }
+
+// --------------theme-switcher----------------------
+import { ThemeProvider } from "./themeswitcher/ThemeContext";
+import Navbar from "./themeswitcher/Navbar";
+import Card from "./themeswitcher/Card";  
+export default function App() {
+  return (
+    <ThemeProvider>
+      <Navbar/>
+      <Card/>
+    </ThemeProvider>
+  )
+}
