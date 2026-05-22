@@ -136,14 +136,29 @@ import { createContext, use, useReducer, useState } from 'react'
 // }
 
 // --------------theme-switcher----------------------
-import { ThemeProvider } from "./themeswitcher/ThemeContext";
-import Navbar from "./themeswitcher/Navbar";
-import Card from "./themeswitcher/Card";  
-export default function App() {
-  return (
-    <ThemeProvider>
-      <Navbar/>
-      <Card/>
-    </ThemeProvider>
+
+// import { ThemeProvider } from "./themeswitcher/ThemeContext";
+// import Navbar from "./themeswitcher/Navbar";
+// import Card from "./themeswitcher/Card";  
+// export default function App() {
+//   return (
+//     <ThemeProvider>
+//       <Navbar/>
+//       <Card/>
+//     </ThemeProvider>
+//   )
+// }
+
+// --------------theme-switcher----------------------
+import ScoreProvider from './score_counter/ScoreContext'
+import { ScoreContext } from './score_counter/ScoreContext'
+import Scoreboard from './score_counter/Scoreboard'
+export default function App(){
+  return(
+    <div>
+        <ScoreProvider>
+          <Scoreboard/>
+        </ScoreProvider>
+    </div>
   )
 }
