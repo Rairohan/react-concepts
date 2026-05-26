@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CountContext } from "../App";
+import { CountContext } from "../../App";
 
 export default function Nbar(){
 const value = useContext(CountContext)

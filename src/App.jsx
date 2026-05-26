@@ -1,7 +1,7 @@
 import { createContext, use, useReducer, useState } from 'react'
 // --------------Task 1------------------
-// import Navbar from './components/Navbar';
-// import Card from './components/Card';
+// import Navbar from './useContext/task1/Navbar';
+// import Card from './useContext/task1/Card';
 // import './App.css'
 // export const ThemeContext = createContext();
 
@@ -22,8 +22,8 @@ import { createContext, use, useReducer, useState } from 'react'
 // )
 // }
 // --------------Task 2------------------
-// import Nav from "./task2/Nav";
-// import Sidebar from "./task2/Sidebar"
+// import Nav from "./useContext/task2/Nav";
+// import Sidebar from "./useContext/task2/Sidebar"
 // export const UserContext = createContext();
 
 // export default function App(){
@@ -37,8 +37,8 @@ import { createContext, use, useReducer, useState } from 'react'
 // }
 
 // --------------Task 3------------------
-// import Header from "./task3.jsx/Header";
-// import Footer from "./task3.jsx/Footer";
+// import Header from "./useContext/task3/Header";
+// import Footer from "./useContext/task3/Footer";
 // export const LanguageContext = createContext();
 // export default function App()
 // {
@@ -59,9 +59,9 @@ import { createContext, use, useReducer, useState } from 'react'
 //   )
 // }
 // --------------Task 4------------------
-// import Nbar from "./task4/Nbar";
-// import Productcard from "./task4/Productcard";
-// import CartSummary from "./task4/CartSummary";  
+// import Nbar from "./useContext/task4/Nbar";
+// import Productcard from "./useContext/task4/Productcard";
+// import CartSummary from "./useContext/task4/CartSummary";  
 // export const CountContext = createContext();
 // export default function App(){
 //   const [count,setCount] = useState(0);
@@ -80,9 +80,9 @@ import { createContext, use, useReducer, useState } from 'react'
 // )
 // }
 // --------------Login system------------------
-// import Dashboard from './Login_sys/Dashboard';
-// import Navbar from './Login_sys/Navbar';
-// import Loginbutton from './Login_sys/Loginbutton';
+// import Dashboard from './advancedLogin_sys/Dashboard';
+// import Navbar from './advanced/Login_sys/Navbar';
+// import Loginbutton from './advanced/Login_sys/Loginbutton';
 // export const AuthContext = createContext();
 // export default function App(){
 //   const [isLoggedIn,setIsLoggedIn] = useState(false)
@@ -106,7 +106,7 @@ import { createContext, use, useReducer, useState } from 'react'
 
 // }
 // --------------Notification-sys----------------------
-// import Notification from './notification_sys/Notification';
+// import Notification from './advanced/Notification_sys/Notification';
 // export const NotifContext = createContext();
 // export default function App(){
 //   const [notif,setNotif] = useState({message:"",type:""})
@@ -120,14 +120,12 @@ import { createContext, use, useReducer, useState } from 'react'
 //   )
 // }
 
-
-
 // --------------Reducer-eg----------------------
-// import Cartcounter from './reducer/Cartcounter'
-// import Trafficlight from './reducer/Trafficlight'
-// import Texteditor from './reducer/Texteditor'
-// import Todo from './reducer/Todo'
-// import Banking from './reducer/Banking'
+// import Cartcounter from './useReducer/reducer/Cartcounter';
+// import Trafficlight from './useReducer/reducer/Trafficlight'
+// import Texteditor from './useReducer/reducer/Texteditor'
+// import Todo from './useReducer/reducer/Todo'
+// import Banking from './useReducer/reducer/Banking'
 // export default function App(){
  
 //   return(
@@ -137,9 +135,9 @@ import { createContext, use, useReducer, useState } from 'react'
 
 // --------------theme-switcher----------------------
 
-// import { ThemeProvider } from "./themeswitcher/ThemeContext";
-// import Navbar from "./themeswitcher/Navbar";
-// import Card from "./themeswitcher/Card";  
+// import {ThemeProvider} from "./useContext/themeswitcher/ThemeContext"
+// import Navbar from "./useContext/themeswitcher/Navbar";
+// import Card from "./useContext/themeswitcher/Card";  
 // export default function App() {
 //   return (
 //     <ThemeProvider>
@@ -150,15 +148,15 @@ import { createContext, use, useReducer, useState } from 'react'
 // }
 
 // --------------theme-switcher----------------------
-import ScoreProvider from './score_counter/ScoreContext'
-import { ScoreContext } from './score_counter/ScoreContext'
-import Scoreboard from './score_counter/Scoreboard'
-export default function App(){
-  return(
-    <div>
-        <ScoreProvider>
-          <Scoreboard/>
-        </ScoreProvider>
-    </div>
-  )
-}
+// import ScoreProvider from './advanced/score_counter/ScoreContext'
+// import { ScoreContext } from './advanced/score_counter/ScoreContext'
+// import Scoreboard from './advanced/score_counter/Scoreboard'
+// export default function App(){
+//   return(
+//     <div>
+//         <ScoreProvider>
+//           <Scoreboard/>
+//         </ScoreProvider>
+//     </div>
+//   )
+// }

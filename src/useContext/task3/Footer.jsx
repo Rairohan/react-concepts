@@ -1,4 +1,4 @@
-import { LanguageContext } from "../App";
+import { LanguageContext } from "../../App";
 import { useContext } from "react";
 export default function Header(){
     const value = useContext(LanguageContext)
