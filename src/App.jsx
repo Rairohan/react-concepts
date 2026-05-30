@@ -164,8 +164,9 @@ import { createContext, use, useReducer, useState } from 'react'
 //---------------useMemo----------------
 import ExpenseCalculator from './useMemo/ExpenseCalculator'
 import NameFilter from './useMemo/NameFilter'
+import ShoppingCart from './useMemo/ShoppingCart'
 export default function App(){
     return(
-        <NameFilter/>
+        <ShoppingCart/>
     )
 }
