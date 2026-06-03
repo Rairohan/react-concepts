@@ -168,8 +168,10 @@ import { createContext, use, useReducer, useState } from 'react'
 
 //---------------useCallback----------------
 import ButtonHandler from './useCallback/ButtonHandler'
+import SearchHandler from './useCallback/SearchHandler'
+import Parent from './useCallback/React.memo/Parent'
 export default function App(){
     return(
-        <ButtonHandler/>
+        <Parent/>
     )
 }

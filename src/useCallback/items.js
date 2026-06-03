@@ -1,0 +1,1 @@
+export const items =["apple","ball","cat","dog","egg","fish"]
