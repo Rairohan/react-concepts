@@ -169,7 +169,8 @@ import { createContext, use, useReducer, useState } from 'react'
 //---------------useCallback----------------
 import ButtonHandler from './useCallback/ButtonHandler'
 import SearchHandler from './useCallback/SearchHandler'
-import Parent from './useCallback/React.memo/Parent'
+// import Parent from './useCallback/React.memo/task1/Parent'
+import Parent from './useCallback/React.memo/task2/Parent'
 export default function App(){
     return(
         <Parent/>
