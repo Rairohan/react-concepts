@@ -171,7 +171,8 @@ import ButtonHandler from './useCallback/ButtonHandler'
 import SearchHandler from './useCallback/SearchHandler'
 // import Parent from './useCallback/React.memo/task1/Parent'
 // import Parent from './useCallback/React.memo/task2/Parent'
-import Parent from './useCallback/React.memo/task3/Parent'
+// import Parent from './useCallback/React.memo/task3/Parent'
+import Parent from './useCallback/React.memo/task4/Parent'
 export default function App(){
     return(
         <Parent/>
