@@ -12,7 +12,7 @@ export const Child2 = React.memo(function Child2({onRemove,count}){
     console.log("Child 2")
     return(
         <div>
-            <button onClick={onRemove}>Click to removev</button>
+            <button onClick={onRemove}>Click to remove</button>
         </div>
     )
 })

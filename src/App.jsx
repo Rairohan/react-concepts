@@ -167,14 +167,22 @@ import { createContext, use, useReducer, useState } from 'react'
 // import ShoppingCart from './useMemo/ShoppingCart'
 
 //---------------useCallback----------------
-import ButtonHandler from './useCallback/ButtonHandler'
-import SearchHandler from './useCallback/SearchHandler'
-// import Parent from './useCallback/React.memo/task1/Parent'
-// import Parent from './useCallback/React.memo/task2/Parent'
-// import Parent from './useCallback/React.memo/task3/Parent'
-import Parent from './useCallback/React.memo/task4/Parent'
+// import ButtonHandler from './useCallback/ButtonHandler'
+// import SearchHandler from './useCallback/SearchHandler'
+// // import Parent from './useCallback/React.memo/task1/Parent'
+// // import Parent from './useCallback/React.memo/task2/Parent'
+// // import Parent from './useCallback/React.memo/task3/Parent'
+// import Parent from './useCallback/React.memo/task4/Parent'
+// export default function App(){
+//     return(
+//         <Parent/>
+//     )
+// }
+
+//---------------CustomHooks----------------
+import ScoreBoard from './CustomHooks/ScoreBoard'
 export default function App(){
     return(
-        <Parent/>
+        <ScoreBoard/>
     )
 }
