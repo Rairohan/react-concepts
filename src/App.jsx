@@ -180,9 +180,11 @@ import { createContext, use, useReducer, useState } from 'react'
 // }
 
 //---------------CustomHooks----------------
-import ScoreBoard from './CustomHooks/ScoreBoard'
+import ScoreBoard from './CustomHooks/task1/ScoreBoard'
+import ThemeSelector from './CustomHooks/task2/ThemeSelector'
+import NameInput from './CustomHooks/task3/NameInput'   
 export default function App(){
     return(
-        <ScoreBoard/>
+        <NameInput/>
     )
 }
