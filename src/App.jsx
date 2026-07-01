@@ -183,9 +183,10 @@ import { createContext, use, useReducer, useState } from 'react'
 import ScoreBoard from './CustomHooks/task1/ScoreBoard'
 import ThemeSelector from './CustomHooks/task2/ThemeSelector'
 import NameInput from './CustomHooks/task3/NameInput'
-import Userlist from './CustomHooks/task4/Userlist'   
+import Userlist from './CustomHooks/task4/Userlist'  
+import DebouncedSearch from './CustomHooks/task5/DebouncedSearch' 
 export default function App(){
     return(
-        <Userlist/>
+        <DebouncedSearch/>
     )
 }
